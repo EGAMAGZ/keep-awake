@@ -55,22 +55,24 @@ const App = () => {
     );
 };
 
-globalThis.addEventListener("focus", () => {
-    document.title = "Keep Awake";
-    document.querySelector("link[rel='icon']")!.setAttribute(
-        "href",
-        "/screen.svg",
-    );
-});
-globalThis.addEventListener("blur", () => {
-    document.title = isLocked.val
-        ? "Active - Keep Awake"
-        : "Inactive - Keep Awake";
+document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("focus", () => {
+        document.title = "Keep Awake";
+        document.querySelector("link[rel='icon']")!.setAttribute(
+            "href",
+            "/screen.svg",
+        );
+    });
+    window.addEventListener("blur", () => {
+        document.title = isLocked.val
+            ? "Active - Keep Awake"
+            : "Inactive - Keep Awake";
 
-    document.querySelector("link[rel='icon']")!.setAttribute(
-        "href",
-        isLocked.val ? "/screen.svg" : "/screen-off.svg",
-    );
+        document.querySelector("link[rel='icon']")!.setAttribute(
+            "href",
+            isLocked.val ? "/screen.svg" : "/screen-off.svg",
+        );
+    });
 });
 
 export default App;
