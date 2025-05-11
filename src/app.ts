@@ -55,14 +55,14 @@ const App = () => {
     );
 };
 
-window.addEventListener("focus", () => {
+globalThis.addEventListener("focus", () => {
     document.title = "Keep Awake";
     document.querySelector("link[rel='icon']")!.setAttribute(
         "href",
         "/screen.svg",
     );
 });
-window.addEventListener("blur", () => {
+globalThis.addEventListener("blur", () => {
     document.title = isLocked.val
         ? "Active - Keep Awake"
         : "Inactive - Keep Awake";
