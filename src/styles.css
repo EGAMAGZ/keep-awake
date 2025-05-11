@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.bg-grid {
+    @apply bg-[#e6f0ff] bg-[linear-gradient(to_right,rgba(0,0,0,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[size:40px_40px];
+}
