@@ -20,7 +20,7 @@ const WakeLockButton = () => {
             },
         },
         van.tags.img({
-            src: isLocked.val ? "/screen-off.svg" : "/screen.svg",
+            src: isLocked.val ? "screen-off.svg" : "screen.svg",
             alt: isLocked.val ? "Screen Off" : "Screen On",
             class: "size-5",
         }),
